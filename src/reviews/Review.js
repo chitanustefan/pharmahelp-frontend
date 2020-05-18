@@ -20,7 +20,7 @@ class Review extends Component {
   addReview(){
     this.setState({postError : null})
     let currentUserId = "";
-    axios.get('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me', {
+    axios.get('https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me', {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
       }
@@ -31,7 +31,7 @@ class Review extends Component {
         rating: this.state.rating,
         comment: this.state.comment
       };
-      let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/reviews/add?userID=" + currentUserId + "&drugID=" + this.props.match.params.id
+      let url = "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/reviews/add?userID=" + currentUserId + "&drugID=" + this.props.match.params.id
       axios.post(url, review, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,

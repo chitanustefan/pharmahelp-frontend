@@ -44,7 +44,7 @@ class EditDrugForm extends Component {
       this.setState({ erroremptyfields: true });
     } else {
       //axios post update
-      let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/update";
+      let url = "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/update";
       axios
         .post(url, drug, {
           headers: {

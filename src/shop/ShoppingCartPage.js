@@ -32,7 +32,7 @@ class ShoppingCart extends Component {
     if(drugList != "null"){
       let items = drugList.match(/[0-9]+/g);
       items.forEach(id => {
-          let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/api/auth/getbyid?id="+id;
+          let url = "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/api/auth/getbyid?id="+id;
           axios.get(url)
           .then(res => {
               let drug = res.data;
@@ -105,7 +105,7 @@ class ShoppingCart extends Component {
     });
 
     let currentUser = "";
-    axios.get('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me', {
+    axios.get('https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me', {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
       }
@@ -122,7 +122,7 @@ class ShoppingCart extends Component {
         drugPerOrders: drugsPerOrder
       }
       console.log(order);
-      let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/order/addorder"
+      let url = "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/order/addorder"
       axios.post(url, order, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,

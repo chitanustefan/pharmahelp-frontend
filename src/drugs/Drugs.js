@@ -15,7 +15,7 @@ class Drugs extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/getall', {
+    axios.get('https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/getall', {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
       }

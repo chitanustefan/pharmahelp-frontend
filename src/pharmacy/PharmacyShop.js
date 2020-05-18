@@ -42,7 +42,7 @@ class PharmacyShop extends Component {
   }
 
   componentDidMount() {
-    let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacystock/getallbyidpharmacy?idPharmacy="+this.props.match.params.id;
+    let url = "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacystock/getallbyidpharmacy?idPharmacy="+this.props.match.params.id;
     axios.get(url, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
@@ -58,7 +58,7 @@ class PharmacyShop extends Component {
     })
     .catch(err => this.setState({errorGetReq:true}));
 
-    axios.get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/reviews/validated", {
+    axios.get("https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/reviews/validated", {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
         'Content-Type' : `application/json`,

@@ -35,7 +35,7 @@ export class DrugMissing extends Component {
   loadreq() {
     axios
       .get(
-        "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/rfa/mostRequestedDrug/?location=" +
+        "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/rfa/mostRequestedDrug/?location=" +
           this.state.city.label,
         {
           headers: {
@@ -64,7 +64,7 @@ export class DrugMissing extends Component {
       return self.indexOf(value) === index;
     }
     axios
-      .get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacystock/locations", {
+      .get("https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacystock/locations", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },

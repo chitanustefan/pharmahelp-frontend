@@ -40,7 +40,7 @@ class PharmacyPage extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacies/all", {
+      .get("https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacies/all", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -126,7 +126,7 @@ class PharmacyPage extends Component {
       //axios post delete pharmacy in care trimit id name location
       //axios get pharmacies ca sa mi se faca refresh
       axios
-        .post("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacies/delete", pharmacy, {
+        .post("https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacies/delete", pharmacy, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },

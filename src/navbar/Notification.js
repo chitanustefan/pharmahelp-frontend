@@ -16,7 +16,7 @@ class Notification extends Component {
 
   componentDidMount() {
     axios
-      .get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/notifications/getunread", {
+      .get("https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/notifications/getunread", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -36,7 +36,7 @@ class Notification extends Component {
   }
 
   handleNotificationClick(id_admin_notifications, e) {
-    let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/notifications/update?id=" +id_admin_notifications +"&readed=true";
+    let url = "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/notifications/update?id=" +id_admin_notifications +"&readed=true";
     axios
       .put(
         url,

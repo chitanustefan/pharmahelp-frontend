@@ -21,7 +21,7 @@ class AddPharmacyPage extends Component {
   submit5(e) {
     e.preventDefault();
     let url =
-      "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacies/register/?name=" +
+      "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacies/register/?name=" +
       this.state.pharmacy.name +
       "&location=" +
       this.state.pharmacy.location;

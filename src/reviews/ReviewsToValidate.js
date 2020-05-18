@@ -28,7 +28,7 @@ class ReviewsToValidate extends Component {
   }
 
   componentDidMount() {
-    axios.get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/reviews/nonvalidated", {
+    axios.get("https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/reviews/nonvalidated", {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
         'Content-Type' : `application/json`,
@@ -72,7 +72,7 @@ class ReviewsToValidate extends Component {
     if (idString.match(regex) || status.match(regex)) {
       this.setState({ errorPost: true });
     } else {
-      let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/reviews/validate?id="+idReview + "&status="+ status
+      let url = "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/reviews/validate?id="+idReview + "&status="+ status
       axios.put(url, {}, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,

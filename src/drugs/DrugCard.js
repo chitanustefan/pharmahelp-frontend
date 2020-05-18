@@ -64,7 +64,7 @@ class DrugCard extends Component {
       this.setState({ error: true });
     } else {
       let url =
-        "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/validate?id=" +
+        "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/validate?id=" +
         drug.id +
         "&status=" +
         drug.status;
@@ -130,7 +130,7 @@ class DrugCard extends Component {
       };
 
       axios
-        .post("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/delete", drug, {
+        .post("https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/delete", drug, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },

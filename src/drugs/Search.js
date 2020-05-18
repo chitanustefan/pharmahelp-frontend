@@ -33,7 +33,7 @@ class Search extends Component {
       !location.match(regex)
     ) {
       let url =
-        "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/api/auth/nameandlocation?name=" +
+        "https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/api/auth/nameandlocation?name=" +
         drug +
         "&location=" +
         location;
