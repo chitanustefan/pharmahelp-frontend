@@ -35,7 +35,7 @@ class LoginForm extends Component {
     if (account.email.match(regex) || account.password.match(regex)) {
       this.setState({ error: true });
     } else {
-        axios.post('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/api/auth/login', account)
+        axios.post('https://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/api/auth/login', account)
         .then(res => {
           localStorage.setItem('accessToken', res.data.accessToken || null)
           localStorage.setItem('role', res.data.role || null)
