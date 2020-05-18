@@ -24,7 +24,7 @@ class OrderPage extends Component {
   componentDidMount() {
     let currentUserId = "";
     axios
-      .get("http://localhost:8080/user/user/me", {
+      .get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -32,7 +32,7 @@ class OrderPage extends Component {
       .then((res) => {
         currentUserId = res.data.id_user;
         let url =
-          "http://localhost:8080/order/getOrdersByUser?idUser=" + currentUserId;
+          "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/order/getOrdersByUser?idUser=" + currentUserId;
         axios
           .get(url, {
             headers: {

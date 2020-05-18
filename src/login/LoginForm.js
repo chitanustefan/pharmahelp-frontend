@@ -4,7 +4,7 @@ import "../App.css";
 import { FaUser, FaLock } from "react-icons/fa";
 import { Button } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
-import '../host';
+import host from '../host';
 
 class LoginForm extends Component {
   constructor() {
@@ -24,6 +24,7 @@ class LoginForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(host);
     this.setState({ error: false });
     this.setState({ loginSuccessfully: null });
     const account = {
@@ -34,7 +35,7 @@ class LoginForm extends Component {
     if (account.email.match(regex) || account.password.match(regex)) {
       this.setState({ error: true });
     } else {
-        axios.post(`${host}/api/auth/login`, account)
+        axios.post('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/api/auth/login', account)
         .then(res => {
           localStorage.setItem('accessToken', res.data.accessToken || null)
           localStorage.setItem('role', res.data.role || null)

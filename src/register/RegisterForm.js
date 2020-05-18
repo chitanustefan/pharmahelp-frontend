@@ -38,7 +38,7 @@ class RegisterForm extends Component {
       this.setState({ emptyInputError: true });
     } else {
       axios
-        .post("http://localhost:8080/api/auth/register", account)
+        .post("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/api/auth/register", account)
         .then((response) => {
           console.log(account);
           this.setState({ registerSuccesfully: true });

@@ -16,7 +16,7 @@ class Homepage extends Component {
   componentDidMount() {
     if(localStorage.getItem("accessToken") != null){
       axios
-        .get("http://localhost:8080/user/user/me", {
+        .get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },

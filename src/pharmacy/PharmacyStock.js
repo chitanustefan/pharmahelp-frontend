@@ -24,14 +24,14 @@ class PharmacyStock extends Component {
 
   componentDidMount() {
     let currentUserId = "";
-      axios.get('http://localhost:8080/user/user/me', {
+      axios.get('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
       })
       .then(res => {
         currentUserId = res.data.id_user;
-        let url = "http://localhost:8080/pharmacystock/getallbypharmacist?idUser="+currentUserId;
+        let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacystock/getallbypharmacist?idUser="+currentUserId;
         axios.get(url, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,

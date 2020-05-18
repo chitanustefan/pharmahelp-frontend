@@ -26,7 +26,7 @@ class EditPharmacyPage extends Component {
     this.setState({ pharmacy: pharmacy });
     // this.setState(pharmacy, this.props.params.location.id);
     console.log(this.state.pharmacy);
-    let url = "http://localhost:8080/pharmacies/update";
+    let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacies/update";
     if (
       (this.state.pharmacy.name !== "") &
       (this.state.pharmacy.location !== "")

@@ -17,7 +17,7 @@ class Prescriptions extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8080/drug/getall", {
+      .get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/getall", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },

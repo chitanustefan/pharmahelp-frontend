@@ -27,7 +27,7 @@ class AddDrugOnStock extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8080/drug/getall', {
+    axios.get('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/getall', {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
       }
@@ -80,14 +80,14 @@ class AddDrugOnStock extends Component {
       this.setState({ errorEmptyInput: true });
     } else {
       let currentUserId = "";
-      axios.get('http://localhost:8080/user/user/me', {
+      axios.get('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
       })
       .then(res => {
         currentUserId = res.data.id_user;
-        let url = "http://localhost:8080/pharmacystock/insertInStock?idUser="+currentUserId+"&idDrug="+drug.id;
+        let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/pharmacystock/insertInStock?idUser="+currentUserId+"&idDrug="+drug.id;
         delete drug.id;
         console.log(url)
         axios.post(url, drug, {

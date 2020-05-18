@@ -23,7 +23,7 @@ class ActiveSubstance extends Component {
     e.preventDefault();
     this.setState({drugs:[]})
     if(this.state.activeSubstance !== ""){
-        axios.get('http://localhost:8080/drug/get/sameActiveSubst?activeSubstance=' + this.state.activeSubstance, {
+        axios.get('http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/get/sameActiveSubst?activeSubstance=' + this.state.activeSubstance, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
       }

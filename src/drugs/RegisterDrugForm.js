@@ -51,14 +51,14 @@ class RegisterDrugForm extends Component {
       this.setState({ errorEmptyInput: false });
       let currentUserId = "";
       axios
-        .get("http://localhost:8080/user/user/me", {
+        .get("http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/user/user/me", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
         })
         .then((res) => {
           currentUserId = res.data.id_user;
-          let url = "http://localhost:8080/drug/";
+          let url = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com/drug/";
           if (localStorage.getItem("role") === roles.admin) {
             url += "admin/add?id=" + currentUserId;
           }
