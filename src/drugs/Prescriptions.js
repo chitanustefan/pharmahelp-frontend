@@ -37,8 +37,8 @@ class Prescriptions extends Component {
   }
 
   render() {
-    var drugs = JSON.stringify(['8','9']);
-    var url = 'http://localhost:3000/cart?drugs='+ encodeURIComponent(drugs);
+    var drugs = JSON.stringify(['7','8']);
+    var url = 'https://master.d2loyxe6wke5v.amplifyapp.com/cart?drugs='+ encodeURIComponent(drugs);
     console.log(url);
     return (
       <div>
