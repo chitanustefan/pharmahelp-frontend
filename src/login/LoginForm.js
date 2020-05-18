@@ -4,6 +4,8 @@ import "../App.css";
 import { FaUser, FaLock } from "react-icons/fa";
 import { Button } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
+import '../host';
+
 class LoginForm extends Component {
   constructor() {
     super();
@@ -32,7 +34,7 @@ class LoginForm extends Component {
     if (account.email.match(regex) || account.password.match(regex)) {
       this.setState({ error: true });
     } else {
-        axios.post('http://localhost:8080/api/auth/login', account)
+        axios.post(`${host}/api/auth/login`, account)
         .then(res => {
           localStorage.setItem('accessToken', res.data.accessToken || null)
           localStorage.setItem('role', res.data.role || null)

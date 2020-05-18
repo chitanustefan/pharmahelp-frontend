@@ -1,0 +1,1 @@
+var host = "http://pharmahelpbackend-env.eba-ysu3wkyz.us-east-2.elasticbeanstalk.com"
