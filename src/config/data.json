@@ -1,0 +1,14 @@
+[
+    {
+        "roles" : {
+            "admin": "admin",
+            "pharmacist": "pharmacist",
+            "patient": "patient"
+        },
+        "status" : {
+            "pending": "pending",
+            "approved": "approved",
+            "rejected": "rejected"
+        }
+    }
+]

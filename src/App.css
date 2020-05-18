@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-image: url("./public/images/background.jpg");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: repeat-y;
+}
+.main-page{
+}
+
+.center{
+  font-family: "Verdana, Geneva", Gadget, sans-serif;
+  background-image: url("./public/images/background.jpg");
+  background-size: cover;
+  background-color: #1abc9c;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 2px 6px 10px 6px grey;
+}
+
+.card > form{
+  display: flex;
+  flex-direction: column;
+}
+
+.card h1{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.form-select-item{
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  margin-bottom: 2rem;
+  width: 16rem;
+  display: inline-block;
+}
+
+.form-item{
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  margin-bottom: 2rem;
+  height: 30px;
+  width: 16rem;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+
+.icon{
+  margin-right:4px;
+}
+
+.form-submit:hover{
+ opacity: 0.7;
+}
+
+.register-button{
+  font-family: Verdana, Geneva, sans-serif;
+  margin: 4px;
+}
+
+.register-card-footer{
+  text-align: center;
+  margin-top: 20px;
+}
+.register-error{
+  color:red;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.register-success{
+  color:green;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.expandButton {
+  background: #F0F0F0 !important;
+  width: 38px;
+  height: 38px;
+}
+.expandButton:hover {
+  background: #D3D3D3 !important;
+}
+.nav-item > a{
+  color: #17a2b8 !important;
+}
+.banner > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.dv-star-rating-star, .dv-star-rating-full-star{
+  font-size: 40px;
+  line-height: 1.3rem;
+}

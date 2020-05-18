@@ -1,0 +1,29 @@
+.banner {
+  width: 60%;
+  height: 100;
+  margin: auto;
+  display: table;
+  text-align: center; /*centers horizontally*/
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 2px 6px 10px 6px grey;
+}
+.banner > form {
+  display: flex;
+  flex-direction: column;
+}
+.register-error {
+  color: red;
+  font-family: Verdana, Geneva, sans-serif;
+}
+section {
+  display: table-cell;
+  vertical-align: middle;
+  color: black;
+  font-family: "Lato";
+}
+
+.cell {
+  font-size: 28px;
+}
